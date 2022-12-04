@@ -1,6 +1,6 @@
 <h1>City Distance</h1>
 
-Small server for calculating the distnace between 2 cities.
+Small server for calculating the distance between 2 cities.
 
 <h2>Description:</h2>
 
