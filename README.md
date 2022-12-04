@@ -6,14 +6,13 @@ Small server for calculating the distance between 2 cities.
 
 In order to get the distance you need to ping.
 
-'/api/distance/?cities=cityOne-cityTwo'
+https://city-distance-production.up.railway.app/api/distance/?cities=cityOne-cityTwo
 
 it returns the names of the two cities and the distance between them in meters.
 
 The server is built on Express using Typescript
 
 <h2>Dependencies:</h2>
-
 
 "express": main framework
 "geolib": to calculate the distance.
