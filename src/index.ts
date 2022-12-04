@@ -1,6 +1,8 @@
 import express, { Request } from "express";
 import { getCoordinates, ICities, queryRegex, capitaliseCity } from "./utils";
 import { getDistance } from "geolib";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8080;
