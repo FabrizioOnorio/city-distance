@@ -1,5 +1,5 @@
-import express, { Request } from "express";
-import { getCoordinates, ICities, queryRegex, capitaliseCity } from "./utils";
+import express from "express";
+import { getCoordinates, queryRegex, capitaliseCity } from "./utils";
 import { getDistance } from "geolib";
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -9,9 +9,9 @@ const port = process.env.PORT || 8080;
 
 app.get(
 	"/api/distance/",
-	async (req: Request<unknown, unknown, unknown, ICities>, res) => {
+	async (req, res) => {
 		try {
-			const citiesSearch = req.query.cities;
+			const citiesSearch = req.query.cities as string;
 			if (!citiesSearch) {
 				res.status(400).json({
 					message:

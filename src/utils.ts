@@ -2,10 +2,6 @@ import fetch from "node-fetch";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-export interface ICities {
-	cities: string;
-}
-
 export const getCoordinates = async (city: string) => {
 	const response = await fetch(
 		"https://api.api-ninjas.com/v1/city?name=" + city,
@@ -27,10 +23,8 @@ export const getCoordinates = async (city: string) => {
 	}
 };
 
-export const queryRegex = (
-	query: string
-) => {
-	const stringPattern = /[a-z]+\s?[a-z]+-[a-z]+\s?[a-z]+/i;
+export const queryRegex = (query: string) => {
+	const stringPattern = /[a-z]+\s?[a-z]+-[a-z]+\s?[a-z]+$/i;
 	return stringPattern.test(query);
 };
 

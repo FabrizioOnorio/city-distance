@@ -59,7 +59,7 @@ const getCoordinates = (city) => __awaiter(void 0, void 0, void 0, function* () 
 });
 exports.getCoordinates = getCoordinates;
 const queryRegex = (query) => {
-    const stringPattern = /[a-z]+\s?[a-z]+-[a-z]+\s?[a-z]+/i;
+    const stringPattern = /[a-z]+\s?[a-z]+-[a-z]+\s?[a-z]+$/i;
     return stringPattern.test(query);
 };
 exports.queryRegex = queryRegex;
