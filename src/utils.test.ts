@@ -12,3 +12,6 @@ test("The query does not accept comma separator", () => {
 test("Passes when 2 cities are divided from a dash", () => {
 	expect(queryRegex("oslo-rome")).toBe(true);
 });
+test("Does not pass with numbers in the query", () => {
+	expect(queryRegex("oslo-rome3")).toBe(false);
+});
