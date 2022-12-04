@@ -1,4 +1,4 @@
-***City Distance
+<h1>City Distance</h1>
 
 Small server for calculating the distnace between 2 cities.
 
